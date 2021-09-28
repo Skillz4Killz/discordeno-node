@@ -1,0 +1,40 @@
+{
+  "name": "discordeno-node",
+  "version": "1.0.0",
+  "description": "I hate that I love you!",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "start": "node dist/src/index",
+    "build": "tsc",
+    "build:watch": "tsc --watch --preserveWatchOutput",
+    "dev": "npm run develop",
+    "develop": "npm run build && concurrently --handle-input -c \"bgBlue.bold,bgMagenta.bold\" -n app,ts \"nodemon --delay 3s dist/index\" \"npm run build:watch\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skillz4Killz/discordeno-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skillz4Killz/discordeno-node/issues"
+  },
+  "homepage": "https://github.com/Skillz4Killz/discordeno-node#readme",
+  "dependencies": {
+    "@prisma/client": "^3.1.1",
+    "@types/node": "^16.10.1",
+    "concurrently": "^6.2.2",
+    "discordeno": "0.0.16",
+    "dotenv": "^10.0.0",
+    "node-fetch": "^3.0.0",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.2.0",
+    "prisma": "^3.1.1"
+  }
+}
